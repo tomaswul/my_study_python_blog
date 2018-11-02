@@ -1,0 +1,39 @@
+{% extends 'backweb/base.html' %}
+{% block column %}
+    <aside class="col-sm-3 col-md-2 col-lg-2 sidebar">
+
+      <ul class="nav nav-sidebar">
+        <li><a href="{% url 'backweb:article' %}">文章</a></li>
+
+
+      </ul>
+      <ul class="nav nav-sidebar">
+        <li><a href="{% url 'backweb:add_category' %}">栏目</a></li>
+
+          <ul class="dropdown-menu" aria-labelledby="otherMenu">
+
+
+          </ul>
+        </li>
+      </ul>
+
+    </aside>
+
+{% endblock %}
+
+{% block content %}
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-lg-10 col-md-offset-2 main" id="main">
+      <h1 class="page-header">信息总览</h1>
+      <div class="row placeholders">
+        <div class="col-xs-6 col-sm-3 placeholder">
+          <h4>文章</h4>
+          <span class="text-muted">0 条</span> </div>
+
+        <div class="col-xs-6 col-sm-3 placeholder">
+          <h4>访问量</h4>
+          <span class="text-muted">0</span> </div>
+      </div>
+
+
+    </div>
+{% endblock %}

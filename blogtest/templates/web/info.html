@@ -1,0 +1,59 @@
+﻿{%  extends 'web/base.html' %}
+
+{% block css %}
+    {{  block.super  }}
+    {% load static %}
+    <link href="{% static 'web/css/info.css' %}" rel="stylesheet">
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+{% block custom %}
+
+  <main>
+    <div class="infosbox">
+      <div class="newsview">
+        <h3 class="news_title" id="title"></h3>
+        <div class="bloginfo">
+          <ul>
+            <li class="author">作者：<a href="#" id="author">{{ art.user.username }}</a></li>
+
+            <li class="lmname">分类：<a href="#">{{ art.articleclass.classname }}</a></li>
+                 <li class="lmname"><a href="#" id="cname"></a></li>
+              <li class="timer">创建时间：<a href="#">{{ art.create_time }}</a></li>
+               <li class="timer" id="creat_time"></li>
+              <li class="view">阅读数：<a href="#">{{ art.count }}</a></li>
+          </ul>
+        </div>
+        <div class="tags">
+             <h2>{{ art.title }}</h2>
+            <a href="#" target="_blank">{{ art.keyword }}</a> &nbsp;
+
+        </div>
+          <div id="con">
+              {{ art.content|safe }}
+          </div>
+
+      </div>
+
+      <div class="nextinfo">
+          {% if preart != None %}
+        <p>上一篇：<a href="{% url 'web:info' preart.id %}">{{ preart.title }}</a></p>
+          {% endif %}
+
+        {% if nextart != None %}
+        <p>下一篇：<a href="{% url 'web:info' nextart.id %}">{{ nextart.title }}</a></p>
+        {% endif %}
+      </div>
+
+    </div>
+  </main>
+{% endblock %}

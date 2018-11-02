@@ -1,0 +1,108 @@
+{% extends 'backweb/base.html' %}
+
+
+{% block js %}
+    {{ block.super }}
+    <script type="text/javascript">
+//是否确认删除
+$(function(){
+	$(".delete_art_id").click(function(){
+		var name = $(this);
+		var id = name.attr("rel"); //对应id
+
+        if(window.confirm("此操作不可逆，是否确认？"))
+        {
+            $.ajax({
+                type: "POST",
+                url: "{% url 'backweb:delete_article' %}",
+                data: {'id':id},
+                cache: false, //不缓存此页面
+                success: function (data) {
+                    window.location.reload();
+                },
+                error:function (data) {
+                    window.location.reload()
+                }
+
+            });
+        };
+
+	});
+});
+</script>
+{% endblock %}
+
+
+ {% block content %}
+
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-lg-10 col-md-offset-2 main" id="main">
+      <form action="#" method="post">
+        <h1 class="page-header">操作</h1>
+        <ol class="breadcrumb">
+          <li><a href="{% url 'backweb:add_article' %}" draggable="false">增加文章</a></li>
+        </ol>
+        <h1 class="page-header">管理 <span class="badge">7</span></h1>
+
+
+        <div class="table-responsive">
+          <table class="table table-striped table-hover">
+            <thead>
+              <tr>
+{#                <th><span class="glyphicon glyphicon-th-large"></span> <span class="visible-lg">选择</span></th>#}
+                <th><span class="glyphicon glyphicon-file"></span> <span class="visible-lg">标题</span></th>
+                <th><span class="glyphicon glyphicon-list"></span> <span class="visible-lg">栏目</span></th>
+                <th class="hidden-sm"><span class="glyphicon glyphicon-tag"></span> <span class="visible-lg">标签</span></th>
+
+                <th><span class="glyphicon glyphicon-time"></span> <span class="visible-lg">日期</span></th>
+                <th><span class="glyphicon glyphicon-pencil"></span> <span class="visible-lg">操作</span></th>
+              </tr>
+            </thead>
+            <tbody>
+            {% for art in arts %}
+              <tr>
+{#                <td><input type="checkbox" class="input-control" name="checkbox[]" value="{{ art.id }}"></td>#}
+                <td class="article-title">{{ art.title }}</td>
+                <td>{{ art.articleclass.classname }}</td>
+                <td class="hidden-sm">{{ art.keyword }}</td>
+
+                <td>{{ art.create_time }}</td>
+                <td><a href="{% url 'backweb:update_article' art.id %}" draggable="false">修改</a> <a rel="{{ art.id }}"  class="delete_art_id">删除</a></td>
+              </tr>
+            {% endfor %}
+
+            </tbody>
+          </table>
+        </div>
+
+        <footer class="message_footer">
+          <nav>
+{#            <div class="btn-toolbar operation" role="toolbar">#}
+{#              <div class="btn-group" role="group"> <a class="btn btn-default" onclick="select()" draggable="false">全选</a> <a class="btn btn-default" onclick="reverse()" draggable="false">反选</a> <a class="btn btn-default" onclick="noselect()" draggable="false">不选</a> </div>#}
+{#              <div class="btn-group" role="group">#}
+{#                <button type="submit" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="" name="checkbox_delete" data-original-title="删除全部选中">删除</button>#}
+{#              </div>#}
+{#            </div>#}
+            <ul class="pagination pagenav">
+              <li class="disabled"><a aria-label="Previous" draggable="false"> <span aria-hidden="true">«</span> </a> </li>
+
+                {% for i in arts.paginator.page_range %}
+                    {% ifequal i page %}
+                        <li class="active"><a href="#" draggable="false">{{ page }}</a></li>
+                    {% else %}
+                        <li><a href="#" draggable="false">{{ i }}</a></li>
+                    {% endifequal %}
+
+                {% endfor %}
+
+              <li><a href="#" aria-label="Next" draggable="false"> <span aria-hidden="true">»</span> </a> </li>
+            </ul>
+          </nav>
+        </footer>
+          {% endblock %}
+      </form>
+    </div>
+
+
+
+
+

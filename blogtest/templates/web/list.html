@@ -1,0 +1,7 @@
+﻿{% extends 'web/base.html' %}
+{% block js %}
+    {{ block.super }}
+    {% load static %}
+    <script type="text/javascript" src="{% static 'web/js/hc-sticky.js' %}"></script>
+{% endblock %}
+
