@@ -16,4 +16,5 @@ urlpatterns = [
 	url(r'^delete_article/', views.delete_article, name='delete_article'),
 	url(r'^logout/', views.logout, name='logout'),
 	url(r'^search/', views.search, name='search'),
+	url(r'^alter_message/', views.alter_message, name='alter_message'),
 ]

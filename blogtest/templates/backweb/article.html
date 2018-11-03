@@ -83,18 +83,30 @@ $(function(){
 {#              </div>#}
 {#            </div>#}
             <ul class="pagination pagenav">
-              <li class="disabled"><a aria-label="Previous" draggable="false"> <span aria-hidden="true">«</span> </a> </li>
+            {% if arts.has_previous %}
+                <li ><a href="{% url 'backweb:article' %}?page={{ arts.previous_page_number }}" aria-label="Previous" draggable="false"> <span aria-hidden="true">«</span> </a> </li>
 
+
+             {% else %}
+                <li class="disabled" ><a aria-label="Previous" draggable="false"> <span aria-hidden="true">«</span> </a> </li>
+
+            {% endif %}
                 {% for i in arts.paginator.page_range %}
+                    {% if forloop.counter <= 5 %}
                     {% ifequal i page %}
                         <li class="active"><a href="#" draggable="false">{{ page }}</a></li>
                     {% else %}
-                        <li><a href="#" draggable="false">{{ i }}</a></li>
+                        <li><a href="{% url 'backweb:article' %}?page={{ i }}" draggable="false">{{ i }}</a></li>
                     {% endifequal %}
+                    {% endif %}
 
                 {% endfor %}
 
-              <li><a href="#" aria-label="Next" draggable="false"> <span aria-hidden="true">»</span> </a> </li>
+                {% if arts.has_next %}
+                <li><a href="{% url 'backweb:article' %}?page={{ arts.next_page_number }}" aria-label="Next" draggable="false"> <span aria-hidden="true">»</span> </a> </li>
+                {% else %}
+                 <li class="disabled" ><a href="#" aria-label="Next" draggable="false"> <span aria-hidden="true">»</span> </a> </li>
+                {% endif %}
             </ul>
           </nav>
         </footer>

@@ -2,6 +2,8 @@ import json
 
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.hashers import make_password
+from django.contrib.auth.models import User
 from django.db.models import Q
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
@@ -9,7 +11,7 @@ from django.core.paginator import Paginator
 
 from django.urls import reverse
 
-from backweb.forms import UserLoginForm, ArticleForm, ArticleClassForm
+from backweb.forms import UserLoginForm, ArticleForm, ArticleClassForm, MessageForm
 from backweb.models import Article, ArticleClass
 
 
@@ -218,3 +220,23 @@ def search(request):
 			arts = paginator.page (page)
 
 		return render (request, 'backweb/article.html', {'arts': arts, 'page': page})
+
+
+@login_required
+def alter_message(request):
+	if request.method == 'GET':
+		return render(request, 'backweb/change_message.html')
+	if request.method == 'POST':
+		form = MessageForm(request.POST)
+
+		if form.is_valid():
+			user = User.objects.get(pk=request.user.id)
+			user.clean()
+
+			user.username = form.cleaned_data.get('username')
+			user.password = make_password(form.cleaned_data.get('password'))
+			user.save()
+			return HttpResponseRedirect(reverse('backweb:login'))
+		return render(request,'backweb/change_message.html',{'error':form.errors})
+
+

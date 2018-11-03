@@ -49,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'util.ExceptionMiddleware.ExceptionMiddleware'
 ]
 
 ROOT_URLCONF = 'blogtest.urls'
@@ -81,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'dj6_user',
         'PORT': 3306,
-        'PASSWORD': '123456',
+        'PASSWORD': '19950523',
         'USER': 'root',
         'HOST': 'localhost'
     }
