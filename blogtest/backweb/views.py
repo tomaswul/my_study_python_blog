@@ -35,7 +35,12 @@ def login(request):
 @login_required
 def index(request):
 	if request.method == 'GET':
-		return render(request, 'backweb/index.html')
+		count = Article.objects.count()
+		all_count = 0
+		for art in Article.objects.filter(count__gt=0):
+			all_count += art.count
+		return render(request, 'backweb/index.html',{'count': count,
+													 'all_count': all_count})
 
 	if request.method == 'POST':
 		pass

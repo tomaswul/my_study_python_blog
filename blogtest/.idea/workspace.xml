@@ -31,16 +31,16 @@
         <counts>
           <entry key="Python Console" value="530" />
           <entry key="css" value="27" />
-          <entry key="html" value="5063" />
-          <entry key="py" value="8378" />
+          <entry key="html" value="5070" />
+          <entry key="py" value="8498" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="27" />
-          <entry key="HTML" value="5062" />
+          <entry key="HTML" value="5069" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="8908" />
+          <entry key="Python" value="9028" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -49,7 +49,7 @@
           <entry key="html" value="82" />
           <entry key="js" value="2" />
           <entry key="json" value="1" />
-          <entry key="py" value="60" />
+          <entry key="py" value="61" />
           <entry key="svg" value="1" />
         </counts>
       </usages-collector>
@@ -59,7 +59,7 @@
           <entry key="HTML" value="82" />
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="2" />
-          <entry key="Python" value="60" />
+          <entry key="Python" value="61" />
           <entry key="SVG" value="1" />
         </counts>
       </usages-collector>
@@ -87,10 +87,31 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backweb/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="314">
+              <caret line="42" column="66" selection-start-line="42" selection-start-column="66" selection-end-line="42" selection-end-column="66" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+                <marker date="1541218084460" expanded="true" signature="559:561" ph="..." />
+                <marker date="1541218084460" expanded="true" signature="1474:1865" ph="..." />
+                <marker date="1541218084460" expanded="true" signature="1866:1868" ph="..." />
+                <marker date="1541218084460" expanded="true" signature="2767:2769" ph="..." />
+                <marker date="1541218084460" expanded="true" signature="3551:3553" ph="..." />
+                <marker date="1541218084460" expanded="true" signature="4834:4836" ph="..." />
+                <marker date="1541218084460" expanded="true" signature="5845:5847" ph="..." />
+                <marker date="1541218084460" expanded="true" signature="6198:6200" ph="..." />
+                <marker date="1541218084460" expanded="true" signature="6328:6330" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/backweb/change_message.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
+            <state relative-caret-position="120">
               <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
             </state>
           </provider>
@@ -123,11 +144,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/backweb/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1248">
-              <caret line="52" column="10" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
+            <state relative-caret-position="288">
+              <caret line="48" column="55" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -198,17 +219,17 @@
         <option value="$PROJECT_DIR$/util/ExceptionMiddleware.py" />
         <option value="$PROJECT_DIR$/templates/web/404.html" />
         <option value="$PROJECT_DIR$/blogtest/settings.py" />
-        <option value="$PROJECT_DIR$/templates/backweb/index.html" />
         <option value="$PROJECT_DIR$/backweb/urls.py" />
         <option value="$PROJECT_DIR$/backweb/forms.py" />
         <option value="$PROJECT_DIR$/templates/backweb/change_message.html" />
-        <option value="$PROJECT_DIR$/backweb/views.py" />
         <option value="$PROJECT_DIR$/templates/backweb/add-flink.html" />
         <option value="$PROJECT_DIR$/templates/backweb/base.html" />
         <option value="$PROJECT_DIR$/templates/backweb/add-article.html" />
         <option value="$PROJECT_DIR$/templates/backweb/category.html" />
         <option value="$PROJECT_DIR$/templates/backweb/update-article.html" />
         <option value="$PROJECT_DIR$/templates/backweb/update-category.html" />
+        <option value="$PROJECT_DIR$/backweb/views.py" />
+        <option value="$PROJECT_DIR$/templates/backweb/index.html" />
       </list>
     </option>
   </component>
@@ -364,7 +385,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3214826" />
@@ -372,7 +393,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.71031094" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3207856" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3207856" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.40589198" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -406,13 +427,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/backweb/views.py</url>
-          <line>48</line>
+          <line>53</line>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/backweb/views.py</url>
-          <line>229</line>
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -669,26 +685,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backweb/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-50">
-          <caret line="224" column="15" selection-start-line="224" selection-start-column="15" selection-end-line="224" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <marker date="1541216156281" expanded="true" signature="559:561" ph="..." />
-            <marker date="1541216156281" expanded="true" signature="1293:1684" ph="..." />
-            <marker date="1541216156281" expanded="true" signature="1685:1687" ph="..." />
-            <marker date="1541216156281" expanded="true" signature="2586:2588" ph="..." />
-            <marker date="1541216156281" expanded="true" signature="3370:3372" ph="..." />
-            <marker date="1541216156281" expanded="true" signature="4653:4655" ph="..." />
-            <marker date="1541216156281" expanded="true" signature="5664:5666" ph="..." />
-            <marker date="1541216156281" expanded="true" signature="6017:6019" ph="..." />
-            <marker date="1541216156281" expanded="true" signature="6147:6149" ph="..." />
-            <marker date="1541216156281" expanded="true" signature="6778:7203" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/backweb/add-flink.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="56">
@@ -703,13 +699,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1056">
           <caret line="44" column="46" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/backweb/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1248">
-          <caret line="52" column="10" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -737,13 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/backweb/article.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2520">
-          <caret line="105" column="16" selection-start-line="105" selection-start-column="16" selection-end-line="105" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/backweb/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -760,8 +742,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/backweb/change_message.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
+        <state relative-caret-position="120">
           <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/backweb/article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2520">
+          <caret line="105" column="16" selection-start-line="105" selection-start-column="16" selection-end-line="105" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backweb/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="42" column="66" selection-start-line="42" selection-start-column="66" selection-end-line="42" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <marker date="1541218084460" expanded="true" signature="559:561" ph="..." />
+            <marker date="1541218084460" expanded="true" signature="1474:1865" ph="..." />
+            <marker date="1541218084460" expanded="true" signature="1866:1868" ph="..." />
+            <marker date="1541218084460" expanded="true" signature="2767:2769" ph="..." />
+            <marker date="1541218084460" expanded="true" signature="3551:3553" ph="..." />
+            <marker date="1541218084460" expanded="true" signature="4834:4836" ph="..." />
+            <marker date="1541218084460" expanded="true" signature="5845:5847" ph="..." />
+            <marker date="1541218084460" expanded="true" signature="6198:6200" ph="..." />
+            <marker date="1541218084460" expanded="true" signature="6328:6330" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/backweb/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="48" column="55" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
         </state>
       </provider>
     </entry>
